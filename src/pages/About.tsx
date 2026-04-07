@@ -1,29 +1,24 @@
-import{
-    IonButton,
-    IonContent,
-    IonHeader,
-    IonMenuButton,
-    IonPage,
-    IonRouterOutlet,
-    IonTitle,
-    IonToolbar,
-    useIonRouter
-} from '@ionic/react';
+//import { IonToolbar } from "@ionic/react"
 
-const About: React.FC = () => {
-    return (
+import { IonPage, IonHeader, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonContent } from "@ionic/react";
+
+
+const About:React.FC = () => {
+    return(
         <IonPage>
             <IonHeader>
-               <IonRouterOutlet>
-                <IonButton slot="start">
-                    <IonMenuButton ></IonMenuButton >
-                </IonButton>
-               </IonRouterOutlet>
+                <IonToolbar>
+                      <IonButtons slot= "start">
+                           <IonMenuButton></IonMenuButton>                          
+                      </IonButtons>
+                      <IonTitle>About</IonTitle>
+                </IonToolbar>
             </IonHeader>
             <IonContent fullscreen>
                 <h1>About</h1>
             </IonContent>
         </IonPage>
+           
     );
 };
 
