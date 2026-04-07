@@ -21,7 +21,7 @@ const Login:React.FC = () => {
             </IonRouterOutlet>
            </IonHeader>
            <IonContent fullscreen>
-            <IonButton expand="full" color="primary" onClick={() => doLogin()}></IonButton>
+            <IonButton expand="full" color="primary" onClick={() => doLogin()}>Login</IonButton>
            </IonContent>
         </IonPage>
            
