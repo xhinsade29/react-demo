@@ -22,7 +22,6 @@ const Login:React.FC = () => {
            </IonHeader>
            <IonContent fullscreen>
             <IonButton expand="full" color="primary" onClick={() => doLogin()}></IonButton>
-            <h1>Login</h1>
            </IonContent>
         </IonPage>
            
