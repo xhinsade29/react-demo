@@ -10,7 +10,7 @@ const Favorites: FC = () => {
                       <IonButtons slot= "start">
                            <IonMenuButton></IonMenuButton>                          
                       </IonButtons>
-                      <IonTitle>Favorates</IonTitle>
+                      <IonTitle>Favorites</IonTitle>
                 </IonToolbar>
             </IonHeader>
             <IonContent fullscreen>
