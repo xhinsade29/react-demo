@@ -3,13 +3,13 @@ import { IonPage, IonHeader, IonToolbar, IonButtons, IonMenuButton, IonTitle, Io
 import React, { FC } from "react";
 
 const Feed: FC = () => {
-    
+
             const games = [
-                {id: 1, name: "Mobile Legend"},
-                {id: 2, name: "Free Fire"},
-                {id: 3, name: "PUBG Mobile"},
-                {id: 4, name: "Call of Duty"},
-                {id: 5, name: "Valorant"},
+                {name: "Mobile Legend"},
+                {name: "Free Fire"},
+                {name: "PUBG Mobile"},
+                {name: "Call of Duty"},
+                {name: "Valorant"},
             ];
 
     return(
@@ -24,14 +24,15 @@ const Feed: FC = () => {
             </IonHeader>
             <IonContent fullscreen>
                
+               <IonContent className="ion-padding">
             <IonList>
-                {games.map((game) => (
-                    <IonItem key={game.id}>
-                        <IonLabel>{game.name}</IonLabel>
+                {games.map((item, index) => (
+                    <IonItem key={index}>
+                        <IonLabel>{item.name}</IonLabel>
                     </IonItem>
                 ))}
             </IonList>
-
+        </IonContent>
 
             </IonContent>
         </IonPage>
