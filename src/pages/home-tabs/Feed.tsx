@@ -12,8 +12,7 @@ const Feed: FC = () => {
                 {name: "Call of Duty", details: "Call of Duty is a multiplayer online battle arena game."},
                 {name: "Valorant", details: "Valorant is a multiplayer online battle arena game."},
             ];
-
-
+            
     return(
         <IonPage>
             <IonHeader>
