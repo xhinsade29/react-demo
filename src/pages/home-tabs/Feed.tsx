@@ -1,42 +1,77 @@
 
-import { IonPage, IonHeader, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonContent, IonList, IonItem, IonLabel    } from "@ionic/react";
+import { IonPage, IonHeader, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonContent, IonList, IonLabel, IonCardContent, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCol, IonRow, IonGrid, IonButton, IonIcon    } from "@ionic/react";
+import { chatbubblesOutline, shareOutline, thumbsUpOutline } from "ionicons/icons";
 import React, { FC } from "react";
 
 const Feed: FC = () => {
 
             const games = [
-                {name: "Mobile Legend"},
-                {name: "Free Fire"},
-                {name: "PUBG Mobile"},
-                {name: "Call of Duty"},
-                {name: "Valorant"},
+                {name: "Mobile Legend", details: "Mobile Legend is a multiplayer online battle arena game."},
+                {name: "Free Fire", details: "Free Fire is a multiplayer online battle arena game."},
+                {name: "PUBG Mobile", details: "PUBG Mobile is a multiplayer online battle arena game."},
+                {name: "Call of Duty", details: "Call of Duty is a multiplayer online battle arena game."},
+                {name: "Valorant", details: "Valorant is a multiplayer online battle arena game."},
             ];
+
 
     return(
         <IonPage>
             <IonHeader>
                 <IonToolbar>
                       <IonButtons slot= "start">
-                           <IonMenuButton></IonMenuButton>                          
-                      </IonButtons>
+                           <IonMenuButton></IonMenuButton>                         
                       <IonTitle>Feed</IonTitle>
+                      </IonButtons>
                 </IonToolbar>
             </IonHeader>
-            <IonContent fullscreen>
                
                <IonContent className="ion-padding">
             <IonList>
                 {games.map((item, index) => (
-                    <IonItem key={index}>
-                        <IonLabel>{item.name}</IonLabel>
-                    </IonItem>
-                ))}
-            </IonList>
-        </IonContent>
+                    <IonCard key={index}>
 
-            </IonContent>
-        </IonPage>
-           
+      <img alt="Silhouette of mountains" 
+      src="https://ionicframework.com/docs/img/demos/card-media.png"
+       />
+
+      <IonCardHeader>
+        <IonCardTitle>{item.name}</IonCardTitle>
+        <IonCardSubtitle></IonCardSubtitle>
+      </IonCardHeader>
+
+     <IonCardContent>{item.details}</IonCardContent>
+
+     <IonGrid>
+        <IonRow>
+          <IonCol>
+            <IonButton fill = "clear" expand="full" >
+              <IonIcon icon={thumbsUpOutline} ></IonIcon>
+              <IonLabel style={{marginLeft: "5px"}}>Like</IonLabel>
+            </IonButton>
+          </IonCol>
+
+          <IonCol>
+            <IonButton fill = "clear" expand="full" >
+              <IonIcon icon={chatbubblesOutline}></IonIcon>
+              <IonLabel style={{marginLeft: "5px"}}>Comment</IonLabel>
+            </IonButton>
+          </IonCol>
+          
+          <IonCol>
+            <IonButton fill = "clear" expand="full" >
+              <IonIcon icon={shareOutline}></IonIcon>
+              <IonLabel style={{marginLeft: "5px"}}>Share</IonLabel>
+            </IonButton>
+          </IonCol>
+        </IonRow>
+      </IonGrid>       
+     </IonCard>
+
+    ))}
+  </IonList>
+</IonContent>
+</IonPage>  
+
     );
 };
 
